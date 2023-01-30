@@ -30,7 +30,7 @@ const Login = (props: Props) => {
         required
         placeholder="email"
         type="email"
-        mb={2}
+        mb={4}
         fontSize={10}
         _placeholder={{ color: "gray.500" }}
         _hover={{ bg: "white", border: "1px solid", borderColor: "blue.500" }}
@@ -61,14 +61,26 @@ const Login = (props: Props) => {
         bg="gray.50"
         onChange={onChangeHandler}
       />
-      <Button type="submit" width="100%" height="36px" mt={2} mb={2}>
+      <Button
+        background="#ff3c00"
+        type="submit"
+        width="100%"
+        height="36px"
+        mt={6}
+        mb={4}
+        _hover={{
+          background: "#ff3c00",
+          opacity: ".80",
+        }}
+      >
         Login In
       </Button>
-      <Flex fontSize={9} justifyContent="center">
-        <Text mr={1}>New Here?</Text>
+      <Flex fontSize={9}>
+        <Text mr={1}>New to Reddit?</Text>
         <Text
           color="blue.500"
           fontWeight={700}
+          textDecoration="underline"
           cursor="pointer"
           onClick={() => {
             setModalState((prev) => ({

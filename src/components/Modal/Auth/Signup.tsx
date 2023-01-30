@@ -79,8 +79,19 @@ const Signup = (props: Props) => {
         bg="gray.50"
         onChange={onChangeHandler}
       />
-      <Button type="submit" width="100%" height="36px" mt={2} mb={2}>
-        Login In
+      <Button
+        type="submit"
+        width="100%"
+        background="#ff3c00"
+        _hover={{
+          background: "#ff3c00",
+          opacity: ".80",
+        }}
+        height="36px"
+        mt={2}
+        mb={2}
+      >
+        Sign Up
       </Button>
       <Flex fontSize={9} justifyContent="center">
         <Text mr={1}>Already a redditor?</Text>
