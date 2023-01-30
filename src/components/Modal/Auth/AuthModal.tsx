@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Text,
   Flex,
@@ -14,8 +14,16 @@ import { authModalState } from "@/src/atoms/authModalAtom";
 import AuthInputs from "./AuthInputs";
 import OAuthButtons from "./OAuthButtons";
 
-const AuthModal = () => {
+type Props = {
+  user: {};
+};
+
+const AuthModal = ({ user }: Props) => {
   const [modalState, setModalState] = useRecoilState(authModalState);
+
+  useEffect(() => {
+    if (user) handleClose();
+  }, [user]);
 
   const handleClose = () => {
     setModalState((prev) => ({
@@ -23,6 +31,7 @@ const AuthModal = () => {
       open: false,
     }));
   };
+
   return (
     <>
       <Modal isOpen={modalState.open} onClose={handleClose}>
