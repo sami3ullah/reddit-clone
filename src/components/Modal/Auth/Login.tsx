@@ -87,6 +87,26 @@ const Login = (props: Props) => {
       >
         Login In
       </Button>
+      <Flex>
+        <Text fontSize={9} mr={1}>
+          Forgot your password?
+        </Text>
+        <Text
+          fontSize={9}
+          color="blue.500"
+          cursor="pointer"
+          fontWeight={700}
+          textDecoration="underline"
+          onClick={() => {
+            setModalState((prev) => ({
+              ...prev,
+              view: "resetPassword",
+            }));
+          }}
+        >
+          Reset
+        </Text>
+      </Flex>
       <Flex fontSize={9}>
         <Text mr={1}>New to Reddit?</Text>
         <Text
@@ -101,7 +121,7 @@ const Login = (props: Props) => {
             }));
           }}
         >
-          SIGN UP
+          Sign Up
         </Text>
       </Flex>
     </form>

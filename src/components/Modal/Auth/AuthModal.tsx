@@ -13,6 +13,7 @@ import { useRecoilState } from "recoil";
 import { authModalState } from "@/src/atoms/authModalAtom";
 import AuthInputs from "./AuthInputs";
 import OAuthButtons from "./OAuthButtons";
+import ResetPassword from "./ResetPassword";
 
 type Props = {
   user: {};
@@ -56,11 +57,17 @@ const AuthModal = ({ user }: Props) => {
               justify="center"
               width="70%"
             >
-              <OAuthButtons />
-              <Text color="gray.500" fontWeight={700}>
-                OR
-              </Text>
-              <AuthInputs />
+              {modalState.view === "login" || modalState.view === "signup" ? (
+                <>
+                  <OAuthButtons />
+                  <Text color="gray.500" fontWeight={700}>
+                    OR
+                  </Text>
+                  <AuthInputs />
+                </>
+              ) : (
+                <ResetPassword />
+              )}
               {/* <ResetPassword /> */}
             </Flex>
           </ModalBody>
