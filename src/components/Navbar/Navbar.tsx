@@ -13,7 +13,12 @@ const Navbar = (props: Props) => {
   const [user, loading, error] = useAuthState(auth);
 
   return (
-    <Flex height="44px" padding="6px 12px" bg="white">
+    <Flex
+      height="44px"
+      padding="6px 12px"
+      bg="white"
+      justifyContent="space-between"
+    >
       <Flex align="center">
         <Image src="/images/redditFace.svg" height="30px" alt="Reddit Logo" />
         <Image

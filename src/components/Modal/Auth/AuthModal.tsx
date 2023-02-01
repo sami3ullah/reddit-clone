@@ -14,9 +14,10 @@ import { authModalState } from "@/src/atoms/authModalAtom";
 import AuthInputs from "./AuthInputs";
 import OAuthButtons from "./OAuthButtons";
 import ResetPassword from "./ResetPassword";
+import { User } from "firebase/auth";
 
 type Props = {
-  user: {};
+  user?: User | null;
 };
 
 const AuthModal = ({ user }: Props) => {
@@ -68,7 +69,6 @@ const AuthModal = ({ user }: Props) => {
               ) : (
                 <ResetPassword />
               )}
-              {/* <ResetPassword /> */}
             </Flex>
           </ModalBody>
         </ModalContent>
