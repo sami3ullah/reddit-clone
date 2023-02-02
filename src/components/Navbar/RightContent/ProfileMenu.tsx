@@ -50,7 +50,7 @@ function ProfileMenu({ user }: Props) {
                     {user?.displayName || user.email?.split("@")[0]}
                   </Text>
                   <Flex>
-                    <Icon as={IoSparkles} color="brand.100" mr={1} />
+                    <Icon as={IoSparkles} color="brand.100" mr={2} />
                     <Text color="gray.400">1 karma</Text>
                   </Flex>
                 </Flex>
