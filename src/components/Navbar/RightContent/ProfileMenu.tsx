@@ -51,7 +51,7 @@ function ProfileMenu({ user }: Props) {
                   </Text>
                   <Flex>
                     <Icon as={IoSparkles} color="brand.100" mr={2} />
-                    <Text color="gray.400">1 karma </Text>
+                    <Text color="gray.400">1 karma.</Text>
                   </Flex>
                 </Flex>
               </>
