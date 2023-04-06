@@ -85,7 +85,7 @@ const Login = (props: Props) => {
         }}
         isLoading={loading}
       >
-        Login In
+        Sign In
       </Button>
       <Flex>
         <Text fontSize={9} mr={1}>
